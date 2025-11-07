@@ -2,14 +2,14 @@ import { Link, useLocation} from "react-router-dom";
 function Navbar(){
     const { pathname } = useLocation();
 
-const navStyles = {
-position: 'sticky',
-top: 0,
-zIndex: 10,
-background: '#ffffff',
-borderBottom: '1px solid #e9e9ef',
-padding: '12px 0'
-}
+// const navStyles = {
+// position: 'sticky',
+// top: 0,
+// zIndex: 10,
+// background: '#ffffff',
+// borderBottom: '1px solid #e9e9ef',
+// padding: '12px 0'
+// }
 
 const links = {
 display: 'flex',
@@ -37,7 +37,12 @@ color: isActive(to) ? '#4338ca' : '#1f2937',
 border: isActive(to) ? '1px solid #c7d2fe' : '1px solid transparent'
 })
     return (
-        <nav style={navStyles}>
+        <nav style={{position: 'sticky',
+top: 0,
+zIndex: 10,
+backgroundColor: '#ffffff',
+borderBottom: '1px solid #e9e9ef',
+padding: '12px 0', justifyContent: 'center'}}>
             <div style={links}>
             <Link to="/" style={linkStyle("/")}>Home</Link>
             <Link to="/about" style={linkStyle("/about")}>About</Link>
