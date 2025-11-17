@@ -4,6 +4,10 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import AddRecipeForm from './components/AddRecipeForm'
 import RecipeList from './components/RecipeList'
+import DeleteRecipeForm from './components/DeleteRecipeButton'
+import EditRecipeForm from './components/EditRecipeForm'
+import RecipeDetails from './components/RecipeDetails'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
 
@@ -33,11 +37,14 @@ function App() {
 //         Click on the Vite and React logos to learn more
 //       </p>
 //     </>
-    <div>
-      <AddRecipeForm />
-      <RecipeList />
-    </div>
-   )
+    <BrowserRouter>
+    <Routes>
+      <Route path="/recipe/:id" element={<RecipeDetails />} />
+      <Route path="/" element={<div><AddRecipeForm /><RecipeList /></div>} />
+      
+    </Routes>
+    </BrowserRouter>
+   );
    
  }
 
