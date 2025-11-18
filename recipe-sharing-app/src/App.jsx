@@ -8,6 +8,7 @@ import DeleteRecipeForm from './components/DeleteRecipeButton'
 import EditRecipeForm from './components/EditRecipeForm'
 import RecipeDetails from './components/RecipeDetails'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import SearchBar from './components/SearchBar'
 
 function App() {
 
@@ -39,8 +40,8 @@ function App() {
 //     </>
     <BrowserRouter>
     <Routes>
+      <Route path="/" element={<div><SearchBar /><AddRecipeForm /><RecipeList /></div>} />
       <Route path="/recipe/:id" element={<RecipeDetails />} />
-      <Route path="/" element={<div><AddRecipeForm /><RecipeList /></div>} />
       
     </Routes>
     </BrowserRouter>
