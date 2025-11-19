@@ -9,6 +9,9 @@ import EditRecipeForm from './components/EditRecipeForm'
 import RecipeDetails from './components/RecipeDetails'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import SearchBar from './components/SearchBar'
+import FavoritesList from "./components/FavoritesList";
+import RecommendationsList from "./components/RecommendationsList";
+
 
 function App() {
 
@@ -40,8 +43,13 @@ function App() {
 //     </>
     <BrowserRouter>
     <Routes>
-      <Route path="/" element={<div><SearchBar /><AddRecipeForm /><RecipeList /></div>} />
+      <Route path="/" element={<div><SearchBar /><AddRecipeForm /><RecipeList /><FavoritesList /><RecommendationsList /></div>} />
       <Route path="/recipe/:id" element={<RecipeDetails />} />
+      
+      
+
+
+     
       
     </Routes>
     </BrowserRouter>
