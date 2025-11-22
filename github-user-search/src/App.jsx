@@ -11,6 +11,7 @@ function App() {
 
     <div>
       <h2>GitHub Search App</h2>
+      <h3>Real App</h3>
     </div>
 
 
