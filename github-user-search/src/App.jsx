@@ -2,16 +2,17 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import SearchComponent from './components/Search'
 
 function App() {
   //  const [count, setCount] = useState(0)
-  console.log("API Key:", import.meta.env.VITE_APP_GITHUB_API_KEY);
+ 
 
    return (
 
     <div>
-      <h2>GitHub Search App</h2>
-      <h3>Real App</h3>
+      <SearchComponent />
+      
     </div>
 
 
