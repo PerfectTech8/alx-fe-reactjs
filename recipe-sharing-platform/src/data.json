@@ -3,18 +3,60 @@
     "id": 1,
     "title": "Spaghetti Carbonara",
     "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
-    "image": "https://via.placeholder.com/150"
+    "image": "https://via.placeholder.com/150",
+    "ingredients": [
+      "200g spaghetti",
+      "100g bacon",
+      "2 eggs",
+      "50g parmesan cheese",
+      "Black pepper"
+    ],
+    "instructions": [
+      "Boil the spaghetti according to package instructions.",
+      "Fry the bacon until crispy.",
+      "Whisk eggs and parmesan together.",
+      "Combine everything while pasta is hot.",
+      "Serve with pepper on top."
+    ]
   },
   {
     "id": 2,
     "title": "Chicken Tikka Masala",
     "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
-    "image": "https://via.placeholder.com/150"
+    "image": "https://via.placeholder.com/150",
+    "ingredients": [
+      "200g spaghetti",
+      "100g bacon",
+      "2 eggs",
+      "50g parmesan cheese",
+      "Black pepper"
+    ],
+    "instructions": [
+      "Boil the spaghetti according to package instructions.",
+      "Fry the bacon until crispy.",
+      "Whisk eggs and parmesan together.",
+      "Combine everything while pasta is hot.",
+      "Serve with pepper on top."
+    ]
   },
   {
     "id": 3,
     "title": "Avocado Toast",
     "summary": "A healthy breakfast with smashed avocado on toasted bread, topped with seasoning.",
-    "image": "https://via.placeholder.com/150"
+    "image": "https://via.placeholder.com/150",
+    "ingredients": [
+      "200g spaghetti",
+      "100g bacon",
+      "2 eggs",
+      "50g parmesan cheese",
+      "Black pepper"
+    ],
+    "instructions": [
+      "Boil the spaghetti according to package instructions.",
+      "Fry the bacon until crispy.",
+      "Whisk eggs and parmesan together.",
+      "Combine everything while pasta is hot.",
+      "Serve with pepper on top."
+    ]
   }
 ]
