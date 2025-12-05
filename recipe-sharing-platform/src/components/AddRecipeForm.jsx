@@ -9,33 +9,63 @@ const AddRecipeForm = (props) => {
   const [errors, setErrors] = useState({});
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  //validation function ALX checker
 
+  const validate = () => {
     const validationErrors = {};
+    const ingredientsList = ingredients.split(/\n|,/).map(i => i.trim()).filter(i => i !== "");
 
-    // Validation: title cannot be empty
     if (!title.trim()) {
       validationErrors.title = "Recipe title is required";
     }
 
-    // Validation: at least 2 ingredients
-    const ingredientsList = ingredients.split(/\n|,/).map(item => item.trim()).filter((item) => item !== "");
     if (ingredientsList.length < 2) {
       validationErrors.ingredients = "Please enter at least two ingredients";
     }
 
-    // Validation: steps cannot be empty
     if (!steps.trim()) {
       validationErrors.steps = "Preparation steps are required";
     }
 
+    return { validationErrors, ingredientsList };
+  };
+
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // use the validation function
+
+    const { validationErrors, ingredientsList } = validate();
+
+   // const validationErrors = {};
+
+    // Validation: title cannot be empty
+
+    // if (!title.trim()) {
+    //   validationErrors.title = "Recipe title is required";
+    // }
+
+    // Validation: at least 2 ingredients
+
+    // const ingredientsList = ingredients.split(/\n|,/).map(item => item.trim()).filter((item) => item !== "");
+    // if (ingredientsList.length < 2) {
+    //   validationErrors.ingredients = "Please enter at least two ingredients";
+    // }
+
+    // Validation: steps cannot be empty
+
+    // if (!steps.trim()) {
+    //   validationErrors.steps = "Preparation steps are required";
+    // }
+
     setErrors(validationErrors);
 
     // Stop form if any validation errors exist
-    if (Object.keys(validationErrors).length > 0) {
-      return;
-    }
+
+    // if (Object.keys(validationErrors).length > 0) {
+    //   return;
+    // }
 
     // Submit (You can connect to API later)
     const newRecipe = {
