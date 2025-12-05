@@ -5,19 +5,27 @@ import './App.css'
 import HomePage from './components/HomePage'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import RecipeDetail from './components/RecipeDetail'
+import AddRecipeForm from './components/AddRecipeForm'
+import recipeData from "./data.json";
 
 function App() {
   // const [count, setCount] = useState(0)
+   const [recipes, setRecipes] = useState(recipeData);
+
+   const addRecipe = (newRecipe) => {
+    setRecipes([...recipes, { id: recipes.length + 1, ...newRecipe }]);
+  };
 
   return (
     
     <Router>
       <Routes>
         {/* Home Page Route */}
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<HomePage recipes={recipes} />} />
 
         {/* Recipe Detail Route */}
-        <Route path="/recipe/:id" element={<RecipeDetail />} />
+        <Route path="/recipe/:id" element={<RecipeDetail recipes={recipes} />} />
+        <Route path="/add-recipe" element={<AddRecipeForm addRecipe={addRecipe} />} />
       </Routes>
     </Router>
 
