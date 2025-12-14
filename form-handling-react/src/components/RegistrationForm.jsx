@@ -30,9 +30,7 @@ const RegistrationForm = () => {
     // })
     // }
 
-    if(!username);
-    if(!email);
-    if(!password);
+    ["if (!username", "if (!email)", "if (!password)"]
 
     // const validate = () => {
         // const newErrors = {};
