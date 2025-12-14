@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const RegistrationForm = () => {
-    const [formData, setFormData] = useState({name: "", email: "", password: ""});
+    const [formData, setFormData] = useState({username: "", email: "", password: ""});
 
     const [errors, setErrors] = useState({});
     const [isSubmitted, setIsSubmitted] = useState(false);
@@ -14,8 +14,8 @@ const RegistrationForm = () => {
         setErrors(prevErrors => { 
             const upDatedErrors = {...prevErrors};
 
-        if(name === "name" && value.trim()){
-            delete upDatedErrors.name;
+        if(name === "username" && value.trim()){
+            delete upDatedErrors.username;
         }
 
         if(name === "email" && value.trim()){
@@ -32,7 +32,7 @@ const RegistrationForm = () => {
 
     const validate = () => {
         const newErrors = {};
-        if(!formData.name.trim()){
+        if(!formData.username.trim()){
             newErrors.name = "name is required";
         }
 
@@ -61,7 +61,7 @@ const RegistrationForm = () => {
     }
     const submitForm = () => {
         setIsSubmitted(true);
-        setFormData({name: "", email: "", password: ""});
+        setFormData({username: "", email: "", password: ""});
         // alert("form submitted successfully");
         
     }
@@ -69,8 +69,8 @@ const RegistrationForm = () => {
     return (
         <form onSubmit={handleSubmit}>
             <div>
-                <input type="text" name="name" value={formData.name} onChange={handleChange}/>
-                    {errors.name && <p style={{color:'red'}}>{errors.name}</p>}
+                <input type="text" name="username" value={formData.username} onChange={handleChange}/>
+                    {errors.name && <p style={{color:'red'}}>{errors.username}</p>}
             </div>
 
             <div>
