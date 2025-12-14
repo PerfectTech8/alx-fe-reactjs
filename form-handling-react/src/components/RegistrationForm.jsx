@@ -6,29 +6,29 @@ const RegistrationForm = () => {
     const [errors, setErrors] = useState({});
     const [isSubmitted, setIsSubmitted] = useState(false);
 
-    const handleChange = (e) => {
-        const {name, value} = e.target;
+    // const handleChange = (e) => {
+    //     const {name, value} = e.target;
 
-        setFormData(prev => ({...prev, [name]: value,}));
+    //     setFormData(prev => ({...prev, [name]: value,}));
 
-        setErrors(prevErrors => { 
-            const upDatedErrors = {...prevErrors};
+    //     setErrors(prevErrors => { 
+    //         const upDatedErrors = {...prevErrors};
 
-        if(name === "username" && value.trim()){
-            delete upDatedErrors.username;
-        }
+    //     if(name === "username" && value.trim()){
+    //         delete upDatedErrors.username;
+    //     }
 
-        if(name === "email" && value.trim()){
-            delete upDatedErrors.email;
-        }
+    //     if(name === "email" && value.trim()){
+    //         delete upDatedErrors.email;
+    //     }
 
-        if(name === "password" && value.length >= 6){
-            delete upDatedErrors.password;
-        }
+    //     if(name === "password" && value.length >= 6){
+    //         delete upDatedErrors.password;
+    //     }
 
-        return upDatedErrors;
-    })
-    }
+    //     return upDatedErrors;
+    // })
+    // }
 
     if(!username);
     if(!email);
