@@ -30,7 +30,7 @@ const RegistrationForm = () => {
     })
     }
 
-    const validate = () => {
+    // const validate = () => {
         const newErrors = {};
         if(!username){
             newErrors.username = "name is required";
@@ -42,12 +42,12 @@ const RegistrationForm = () => {
 
         if(!password){
             newErrors.password = "password is required";
-        }else if(password.length < 6){
+        }else if(formData.password.length < 6){
             newErrors.password = "password lenght must be greater than 6 charaters";
         }
 
         return newErrors;
-    }
+    // }
 
     const handleSubmit = (e) => {
         e.preventDefault();
