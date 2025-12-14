@@ -30,23 +30,27 @@ const RegistrationForm = () => {
     })
     }
 
+    if(!username);
+    if(!email);
+    if(!password);
+
     // const validate = () => {
-        const newErrors = {};
-        if(!username){
-            newErrors.username = "name is required";
-        }
+        // const newErrors = {};
+        // if(!username){
+        //     newErrors.username = "name is required";
+        // }
 
-        if(!email){
-            newErrors.email = "email is required";
-        }
+        // if(!email){
+        //     newErrors.email = "email is required";
+        // }
 
-        if(!password){
-            newErrors.password = "password is required";
-        }else if(formData.password.length < 6){
-            newErrors.password = "password lenght must be greater than 6 charaters";
-        }
+        // if(!password){
+        //     newErrors.password = "password is required";
+        // }else if(formData.password.length < 6){
+        //     newErrors.password = "password lenght must be greater than 6 charaters";
+        // }
 
-        return newErrors;
+        // return newErrors;
     // }
 
     const handleSubmit = (e) => {
