@@ -3,15 +3,19 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import PostsComponent from './components/PostsComponent'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
 function App() {
   // const [count, setCount] = useState(0)
+  const queryClient = new QueryClient();
 
   return (
 
     <div style={{ padding: "20px" }}>
       <h1>React Query Demo</h1>
+      <QueryClientProvider client={queryClient}>
       <PostsComponent />
+      </QueryClientProvider>
     </div>
 
 
