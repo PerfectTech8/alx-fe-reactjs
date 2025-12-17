@@ -1,4 +1,5 @@
 import { Link, Outlet } from "react-router-dom";
+ ["Routes", "Route", "ProfileDetails", "ProfileSettings"]
 
 const Profile = () => {
   return (
