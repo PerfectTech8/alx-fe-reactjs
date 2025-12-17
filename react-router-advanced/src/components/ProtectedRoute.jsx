@@ -1,4 +1,5 @@
 import { Navigate } from "react-router-dom";
+["useAuth"]
 
 const isAuthenticated = false; // simulate auth
 
